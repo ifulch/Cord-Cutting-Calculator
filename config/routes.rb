@@ -2,9 +2,11 @@ Rails.application.routes.draw do
   
   root 'pages#home'
   
+  resources :users
   resources :stream_packages
   resources :channels
   
+  get 'signup', to: 'users#new'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   # get 'login', to: redirect('/auth/google_oauth2'), as: 'login'
   # get 'logout', to: 'sessions#destroy', as: 'logout'
