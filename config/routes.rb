@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   resources :channels
   
   get 'signup', to: 'users#new'
+  
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   # get 'login', to: redirect('/auth/google_oauth2'), as: 'login'
   # get 'logout', to: 'sessions#destroy', as: 'logout'
@@ -15,7 +19,7 @@ Rails.application.routes.draw do
   # get 'signin', to: 'signin#show', as: 'signin'
   # get 'home', to: 'home#show', as: 'home'
   # post 'home', to: 'home#show'
-  # get 'user/input', to: 'user#input'
+  get 'user/input', to: 'user#input'
   # post 'user/recommendation', to: 'user#recommendation', as: 'recommendation'
 
 
