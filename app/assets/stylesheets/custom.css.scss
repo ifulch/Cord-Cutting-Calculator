@@ -26,16 +26,18 @@ $navbar-default-bg: black;
 }
 
 .jumbotron{
-  background-image: asset-url('background02.jpg');
+  background-image: asset-url('background03.jpg');
   background-size: cover;
-  height: 680px;
-  length: 1080px;
+  height: 950px;
+  length: 950px;
 }
 
 .jumbotron h1{
   color: #fff;
   text-align: center;
-  margin-bottom: 30px;
+  padding-top: 100px;
+  margin-top: 100px;
+  margin-bottom: 60px;
   letter-spacing: -1px;
   font-weight: bold;
 }
@@ -46,8 +48,9 @@ $navbar-default-bg: black;
 }
 
 footer {
-  margin-top: 45px;
+  margin-top: 15px;
   padding-top: 5px;
+  margin-bottom: 30px;
   border-top: 1px solid #eaeaea;
   color: #777;
 }
