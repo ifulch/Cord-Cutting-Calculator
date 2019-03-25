@@ -30,8 +30,8 @@ anded="false">Packages<span class="caret"></span></a>
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-exp
 anded="false">Channels<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="#">View Channels</a></li>
-              <li><a href="#">Create Channels</a></li>
+              <li><%= link_to "View Channels", channels_path, class: request.path == "/channels" ? "item active" : "item" %></li>
+              <li><%= link_to "Create Channels", edit_channel_path</li>
             </ul>
           </li>
         <% end %>  
