@@ -11,6 +11,12 @@ Rails.application.routes.draw do
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
+  get 'channels', to: 'channels#index'
+  get 'new_channels', to: 'channels#new'
+  get 'packages', to: 'stream_packages#index'
+  get 'new_packages', to: 'stream_packages#new'
+  get 'home', to: 'pages#home'
+  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   # get 'login', to: redirect('/auth/google_oauth2'), as: 'login'
   # get 'logout', to: 'sessions#destroy', as: 'logout'
