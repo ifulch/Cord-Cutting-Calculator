@@ -25,8 +25,8 @@ Rails.application.routes.draw do
   # get 'signin', to: 'signin#show', as: 'signin'
   # get 'home', to: 'home#show', as: 'home'
   # post 'home', to: 'home#show'
-  # get 'user/input', to: 'user#input'
-  # post 'user/recommendation', to: 'user#recommendation', as: 'recommendation'
+  get 'user/input', to: 'user#input'
+  post 'user/recommendation', to: 'user#recommendation', as: 'recommendation'
 
 
 end
