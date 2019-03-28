@@ -1,6 +1,5 @@
-class UserController < ApplicationController
-  # before_action :authenticate
-
+class CalculatorController < ApplicationController
+ before_action :require_user
   def input
     @user = User.find(session[:user_id])
     user_channels = @user.channels_users
@@ -51,6 +50,6 @@ class UserController < ApplicationController
       StreamPackage.all,
       budget
     )
-    redirect_to "/user/input"
+    redirect_to 'calculator/input' 
   end
 end
