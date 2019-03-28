@@ -8,13 +8,23 @@ Feature: User Scenarios
 #   Given I am on the signin page
 #   And I follow "Sign in with Google"
 #   Then I am on the user home page
-Background: User Page
+Background: Go to cord cutting page
+  Given I am on the signup page
+  When I fill in "Username" with "test"
+  When I fill in "Email" with "test@test.com"
+  And I fill in "Password" with "test123pass"
+  And I press "Sign up"
+  Then I should be on the root page
+  And I should see "Just begin to cut your cord, test!" 
   Given I am on the login page
-  #When I fill in "Email" with "test@test.com"
-  #And I fill in "Password" with "test123pass"
-  And I follow "Log in"
-  Then I am on the user home page
-
+  When I fill in "Email" with "test@test.com"
+  And I fill in "Password" with "test123pass"
+  And I press "Log in"
+  Then I should be on the user page
+  And I should see "You have successfully logged in."
+  When I follow "Cut Cord!"
+  Then I should be on the calculator page
+  
   Given the following channels exist:
   | name        | category          |
   | Sun TV      |  Entertainment    |

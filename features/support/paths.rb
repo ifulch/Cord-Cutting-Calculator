@@ -16,9 +16,16 @@ module NavigationHelpers
       new_stream_package_path
     when /^the channels\s?page$/
       channels_path
-    when /^the user home\s?page$/
-      user_input_path
-
+    when /^the user\s?page$/
+      '/users/1'
+    when /^the root\s?page$/
+      root_path
+    when /^the signup\s?page$/
+      signup_path
+    when /^the calculator\s?page$/
+      '/calculator/1/input'
+    when /^the calculator recommendation\s?page$/
+      '/calculator/1/recommendation'  
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

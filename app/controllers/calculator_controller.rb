@@ -18,7 +18,7 @@ class CalculatorController < ApplicationController
   end
 
   def recommendation
-    @user = User.find(session[:username])
+    @user = User.find(session[:user_id])
     must_channel_ids = params[:must_channel_ids].map{ |id| id.split(",") }.flatten
     good_channel_ids = params[:good_channel_ids].map{ |id| id.split(",") }.flatten
     ok_channel_ids = params[:ok_channel_ids].map{ |id| id.split(",") }.flatten
@@ -42,7 +42,6 @@ class CalculatorController < ApplicationController
       user_channels = @user.channels_users
     end
 
-
     flash[:reco] = User.recommendation(
       must_channel_ids,
       good_channel_ids,
@@ -50,6 +49,6 @@ class CalculatorController < ApplicationController
       StreamPackage.all,
       budget
     )
-    redirect_to 'calculator/input' 
+    redirect_to "/calculator/#{@user.id}/input" 
   end
 end
