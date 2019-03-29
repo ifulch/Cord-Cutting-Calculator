@@ -18,3 +18,11 @@ Feature: Signing with Google
     And I press "Log in"
     Then I should be on the user page
     And I should see "You have successfully logged in."
+    
+  Scenario: login with valid credentials
+    Given I am on the login page
+    When I fill in "Email" with "fake@fake.com"
+    And I fill in "Password" with "fakepassword"
+    And I press "Log in"
+    Then I should be on the login page
+    And I should see "Please enter the correct imformation!"
