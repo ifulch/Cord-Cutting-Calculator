@@ -19,7 +19,7 @@ Feature: Signing with Google
     Then I should be on the user page
     And I should see "You have successfully logged in."
     
-  Scenario: login with valid credentials
+  Scenario: login with invalid credentials
     Given I am on the login page
     When I fill in "Email" with "fake@fake.com"
     And I fill in "Password" with "fakepassword"
