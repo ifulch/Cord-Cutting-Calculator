@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       flash[:success] = "Just begin to cut your cord, #{@user.username}!"
-      redirect_to root_path
+      redirect_to user_path(session[:user_id])
     else
       render 'new'
     end

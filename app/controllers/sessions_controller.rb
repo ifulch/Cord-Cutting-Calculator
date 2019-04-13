@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       # flash[:success] = "You have successfully logged in."
       # redirect_to root_path
-      redirect_to user_path(user.id), :method => :get 
+      redirect_to user_path(session[:user_id])
       flash[:success] = "You have successfully logged in."
     else
       flash.now[:danger] = "Please enter the correct imformation!"
